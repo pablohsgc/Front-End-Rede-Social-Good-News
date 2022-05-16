@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+}
+
+
+.vermelho{
+    background-color: red;
+    height: 500px;
+}
+
+.azul{
+    background-color: blue;
+    height: 500px;
+}
