@@ -3,6 +3,8 @@
 .menu{
     padding-top: 4px;
     padding-left: 4px; 
+    position: sticky;
+    top: 0;
 }
 
 .icone-menu{
@@ -34,5 +36,3 @@
 .menu a:hover{/*Temporario*/
     color: white;
 }
-
-

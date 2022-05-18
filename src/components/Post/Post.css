@@ -7,7 +7,7 @@
 
 .fotoPerfilPost {
     background-color: rgb(236, 15, 15);
-    padding: 50px;
+    padding: 40px;
     border-radius: 100%;
 }
 
@@ -16,18 +16,31 @@
 }
 
 .cabecalhoPost {
-    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .relevancia {
     float: right;
     display: flex;
-    width: 200px;
-    justify-content: space-around;
+    flex-direction: column;
+}
+
+.relevanciaTopo{
+    display: flex;
+    justify-content: space-between;
 }
 
 .texto {
     border-radius: 10px;
     border: 1px solid black;
     padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.nomeUsuarioPost{
+    margin-left: 15px;
 }

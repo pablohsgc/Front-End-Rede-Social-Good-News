@@ -1,13 +1,15 @@
+import './Layout.css';
+
 export function Layout(props){
     return (
         <>
-        <div className="App row">
-            <aside className='col-lg-3 vermelho'>
+        <div className="app row">
+            <aside className='col-lg-3'>
                 {
                     props.menu
                 }
             </aside>
-            <main className='col-lg-9 azul'>
+            <main className='col-lg-9'>
                 {
                     props.areaMain
                 }

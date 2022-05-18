@@ -5,12 +5,17 @@ export function Post(props) {
         <article className="post">
             <div className="cabecalhoPost">
                 <div className="usuarioPost">
-                    <img className="fotoPerfilPost" src="" alt="Imagem do perfil" />
-                    <span>{props.nomeUsuario}</span>
+                    <img className="fotoPerfilPost"/>
+                    <span className="nomeUsuarioPost">{props.nomeUsuario}</span>
                 </div>
                 <div className="relevancia">
-                    <span>Relevancia</span>
-                    <span>{props.porcentagem}</span>
+                    <div className="relevanciaTopo">
+                        <span>Relevancia</span>
+                        <span>{props.porcentagem}%</span>
+                    </div>
+                    <div className="relevanciaFundo">
+                        <progress  className="progress-relevancia" value={props.porcentagem} max="100">{props.porcentagem}%</progress>
+                    </div>
                 </div>
             </div>
             <div className="texto">{props.postagem}</div>
