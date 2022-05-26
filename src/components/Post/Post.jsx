@@ -1,4 +1,7 @@
 import './Post.css';
+import like from '../../assets/like.png';
+import deslike from '../../assets/deslike.png';
+import comentario from '../../assets/comentario.png';
 
 export function Post(props) {
     return (
@@ -19,9 +22,9 @@ export function Post(props) {
                 </div>
             </div>
             <div className="texto">{props.postagem}</div>
-            <img src="" alt="Gostei" />
-            <img src="" alt="Nao Gostei" />
-            <img src="" alt="Comentarios" />
+            <img src={like} alt="Gostei" />
+            <img src={deslike} alt="Nao Gostei" />
+            <img src={comentario} alt="Comentarios" />
         </article>
     );
 }

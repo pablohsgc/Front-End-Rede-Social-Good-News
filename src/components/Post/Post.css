@@ -1,8 +1,15 @@
 .post {
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid rgb(221, 221, 221);
     padding: 10px 15px;
     margin-bottom: 10px;
+    background-color: #f0efef;
+}
+
+.post:hover {
+    background-color: #e2e2e2;
+    border: 1px solid #c4c4c4;
+
 }
 
 .fotoPerfilPost {
@@ -45,6 +52,3 @@
     margin-left: 15px;
 }
 
-article {
-    background-color: rgb(233, 233, 236);
-}
