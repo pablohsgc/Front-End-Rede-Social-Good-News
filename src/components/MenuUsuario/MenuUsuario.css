@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
-.menu{
+.menu {
     padding-top: 4px;
-    padding-left: 4px; 
-    position: sticky;
-    top: 0;
+    padding-left: 4px;
+
 }
 
-.icone-menu{
+.icone-menu {
     color: black;
     width: 22px;
     height: 22px;
@@ -15,24 +14,25 @@
     margin-right: 4px;
 }
 
-.menu ul{
+.menu ul {
     margin-top: 20px;
     list-style-type: none;
     padding-left: 0.5em;
 }
 
-.menu li{
+.menu li {
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
 }
 
-.menu a{
+.menu a {
     color: black;
     text-decoration: none;
 }
 
-.menu a:hover{/*Temporario*/
+.menu a:hover {
+    /*Temporario*/
     color: rgb(88, 77, 77);
 }

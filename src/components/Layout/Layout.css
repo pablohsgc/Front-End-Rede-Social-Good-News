@@ -2,3 +2,16 @@
     max-width: 100%;
     box-sizing: border-box;
 }
+
+@media screen and (min-width: 1200px) {
+    .aside-lateral{
+        width: 30%;
+        min-height: 100vh;
+    }
+    .main-posts{
+        width: 70%;
+        max-height: 100vh;
+        overflow-x: auto;
+    }
+}
+    

@@ -4,12 +4,12 @@ export function Layout(props){
     return (
         <>
         <div className="app row">
-            <aside className='col-lg-3'>
+            <aside className='aside-lateral'>
                 {
                     props.menu
                 }
             </aside>
-            <main className='col-lg-9'>
+            <main className='main-posts'>
                 {
                     props.areaMain
                 }
