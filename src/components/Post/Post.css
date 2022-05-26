@@ -41,9 +41,9 @@
     justify-content: space-between;
 }
 
-.texto {
+.post .texto {
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--cor-border-secundario);
     padding: 10px 15px;
     margin-bottom: 10px;
 }
