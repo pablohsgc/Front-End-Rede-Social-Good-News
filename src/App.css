@@ -8,4 +8,22 @@
     --bg-secundario-hover: #e2e2e2;
     --cor-border-secundario: #c4c4c4;
     --cor-border-secundario-hover: #c4c4c4;
+    --cor-texto-primario: #333;
+    --cor-texto-primario-hover: #505050;
+    --cor-botao-primario: #03C3FF;
+    --cor-botao-primario-hover: #65dbff;
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --bg-primario: #2c2b2b;
+        --bg-secundario: #383838a8;
+        --bg-secundario-hover: #303030a8;
+        --cor-border-secundario: #505050;
+        --cor-border-secundario-hover: #505050;
+        --cor-texto-primario: #f3f3f3;
+        --cor-texto-primario-hover: #c4c4c4;
+        --cor-botao-primario: #1e90ff;
+        --cor-botao-primario-hover: #000;
+    }
 }

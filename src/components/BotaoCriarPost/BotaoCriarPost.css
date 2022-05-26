@@ -1,14 +1,16 @@
+
+
 .botaoPost {
     width: 157px;
-    background: #03C3FF;
+    background: var(--cor-botao-primario);
     border-radius: 10px;
     border: none;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--cor-texto-primario);
+    font-weight: bold;
     font-size: 20px;
 }
 
 .botaoPost:hover {
-    background-color: aqua;
+    background-color: var(--cor-botao-primario-hover);
 }

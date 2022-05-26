@@ -1,8 +1,8 @@
 .cardPerfil{
     padding: 10px;
-    border: 1px solid rgb(221, 221, 221);
+    border: 1px solid var(--cor-border-secundario);
     border-radius: 10px;
-    background-color: #f0efef;
+    background-color: var(--cor-bg-secundario);
 }
 
 .fotoPerfil{
@@ -24,19 +24,21 @@
 
 .linkSair{
     float: right;
-    color: black;
+    color: var(--cor-texto-primario);
     text-decoration: none;
 }
 
 .nomeUsuario{
     font-size: 1em;
+    color: var(--cor-texto-primario);
 }
 
 .bioUsuario{
     font-size: 0.9em;
+    color: var(--cor-texto-primario);
 }
 
 .branco{
     color: aliceblue;
-    border: 1px solid black;
+    border: 1px solid var(--cor-border-secundario);
 }

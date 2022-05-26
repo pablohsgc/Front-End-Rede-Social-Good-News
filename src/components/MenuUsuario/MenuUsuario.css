@@ -7,7 +7,7 @@
 }
 
 .icone-menu {
-    color: black;
+    color: var(--cor-texto-primario);
     width: 22px;
     height: 22px;
     margin-top: -4px;
@@ -28,11 +28,11 @@
 }
 
 .menu a {
-    color: black;
+    color: var(--cor-texto-primario);
     text-decoration: none;
 }
 
 .menu a:hover {
     /*Temporario*/
-    color: rgb(88, 77, 77);
+    color: var(--cor-texto-primario-hover);
 }
