@@ -26,6 +26,7 @@
     float: right;
     color: var(--cor-texto-primario);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nomeUsuario{

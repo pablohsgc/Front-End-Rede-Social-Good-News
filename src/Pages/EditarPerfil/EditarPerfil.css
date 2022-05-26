@@ -1,0 +1,11 @@
+.editarPerfil{
+    background-color: black;
+}
+
+.divFoto-editarPerfil {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 100%;
+    margin: 0 auto;
+}
