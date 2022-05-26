@@ -1,4 +1,6 @@
 import './CardPerfil.css';
+import { SvgIcon } from '@mui/material';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
 export function CardPerfil(){
     return (
@@ -9,7 +11,7 @@ export function CardPerfil(){
             <div className='divInfoUsuario'>
                 <span className='nomeUsuario'>Nome</span><br/>
                 <span className='bioUsuario'>Bio</span><br/>
-                <a className='linkSair'>Sair</a>
+                <a className='linkSair'>Sair <SvgIcon component={LogoutOutlinedIcon} sx={{ fontSize: 20 }} /></a>
             </div>
         </div>
     );
