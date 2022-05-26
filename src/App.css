@@ -1,3 +1,11 @@
 * {
     margin: 0;
 }
+
+:root {
+    --bg-primario: #f3f3f3;
+    --bg-secundario: #f0efef;
+    --bg-secundario-hover: #e2e2e2;
+    --cor-border-secundario: #c4c4c4;
+    --cor-border-secundario-hover: #c4c4c4;
+}

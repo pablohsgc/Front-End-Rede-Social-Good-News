@@ -1,8 +1,8 @@
 .cardPerfil{
     padding: 10px;
-    border: 1px solid #000000;
+    border: 1px solid rgb(221, 221, 221);
     border-radius: 10px;
-    background-color: #e4e4e4;
+    background-color: #f0efef;
 }
 
 .fotoPerfil{
