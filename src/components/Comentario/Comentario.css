@@ -1,0 +1,19 @@
+.comentario{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--bg-primario);
+    margin-bottom: 10px;
+}
+
+.cabecalho-comentario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.comentario .texto{
+    padding: 20px;
+    background-color: var(--bg-postagem);
+}

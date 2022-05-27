@@ -4,10 +4,11 @@ import like from '../../assets/like.png';
 import deslike from '../../assets/deslike.png';
 import comentario from '../../assets/comentario.png';
 */
-import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
-import { SvgIcon } from '@mui/material';
+import { SvgIcon, Button } from '@mui/material';
+import { ButtonModalComentarios } from '../ButtonModalComentarios/ButtonModalComentarios';
+
 
 export function Post(props) {
     return (
@@ -28,9 +29,9 @@ export function Post(props) {
                 </div>
             </div>
             <div className="texto">{props.postagem}</div>
-            <SvgIcon component={ThumbUpOutlinedIcon} fontSize="medium" />
-            <SvgIcon component={ThumbDownAltOutlinedIcon} fontSize="medium" />
-            <SvgIcon component={ModeCommentOutlinedIcon} fontSize="medium" />
+            <Button><SvgIcon component={ThumbUpOutlinedIcon} fontSize="medium" /></Button>
+            <Button><SvgIcon component={ThumbDownAltOutlinedIcon} fontSize="medium" /></Button>
+            <ButtonModalComentarios quantidade={props.comentarios.length} comentarios={props.comentarios} idPost={props.idPost}></ButtonModalComentarios>
         </article>
     );
 }
