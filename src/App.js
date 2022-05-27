@@ -28,24 +28,16 @@ function App() {
 
 
   return (
-    /*<div className="App row">
-      <aside className='col-lg-3 vermelho'>
-        <MenuUsuario></MenuUsuario>
-      </aside>
-      <main className='col-lg-9 azul'>
-
-      </main>
-    </div>*/
     <>
       <BrowserRouter>
         <AuthProvider>
           <Routes>
-            <Route path="/login" element={<Layout menu={<MenuUsuario></MenuUsuario>} areaMain={<Login></Login>} />} exact />
-            <Route path="/meusComentarios" element={<Layout menu={<MenuUsuario></MenuUsuario>} areaMain={<MeusComentarios></MeusComentarios>} />} />
-            <Route path="/meusPosts" element={<Layout menu={<MenuUsuario></MenuUsuario>} areaMain={<MeusPosts></MeusPosts>} />} />
-            <Route path="/editarPerfil" element={<Layout menu={<MenuUsuario></MenuUsuario>} areaMain={<EditarPerfil></EditarPerfil>} />} />
-            <Route path="/paginaInicial" element={<Layout menu={<MenuUsuario></MenuUsuario>} areaMain={<PaginaInicial></PaginaInicial>} />} />
-
+            <Route path="/" element={<Login/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/meusComentarios" element={<Layout menu={<MenuUsuario/>} areaMain={<MeusComentarios/>} />} />
+            <Route path="/meusPosts" element={<Layout menu={<MenuUsuario/>} areaMain={<MeusPosts/>} />} />
+            <Route path="/editarPerfil" element={<Layout menu={<MenuUsuario/>} areaMain={<EditarPerfil/>} />} />
+            <Route path="/paginaInicial" element={<Layout menu={<MenuUsuario/>} areaMain={<PaginaInicial/>} />} />
           </Routes>
         </AuthProvider>
       </BrowserRouter>
