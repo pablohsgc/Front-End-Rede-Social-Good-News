@@ -1,8 +1,8 @@
 .comentario{
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid  var(--cor-border-primario);
     border-radius: 5px;
-    background-color: var(--bg-primario);
+    background-color: var(--bg-secundario);
     margin-bottom: 10px;
 }
 
@@ -13,7 +13,17 @@
     padding: 10px;
 }
 
+.dataComentario{
+    color: var(--cor-texto-secundario);
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.nomeUsuarioPost{
+    color: var(--cor-texto-primario);
+}
+
 .comentario .texto{
     padding: 20px;
-    background-color: var(--bg-postagem);
+    background-color: var(--bg-secundario);
 }
