@@ -72,6 +72,10 @@ form h1 {
 
 }
 
+.input:hover{
+    background-color: var(--cor-border-secundario);
+}
+
 form input:focus+label,
 input:valid~label {
     bottom: 40px;
@@ -92,6 +96,10 @@ form input[type="submit"] {
     color: var(--cor-texto-primario);
     background-color: var(--cor-botao-primario);
     width: 100%;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--cor-botao-primario-hover);
 }
 
 .box {
