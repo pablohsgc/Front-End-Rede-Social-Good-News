@@ -29,6 +29,17 @@
     cursor: pointer;
 }
 
+.botaoSair{
+    border:none;
+    background-color: inherit;
+    color: inherit;
+}
+
+.botaoSair:hover{
+    color: var(--cor-texto-primario-hover);
+    font-weight: bold;
+}
+
 .nomeUsuario{
     font-size: 1em;
     color: var(--cor-texto-primario);

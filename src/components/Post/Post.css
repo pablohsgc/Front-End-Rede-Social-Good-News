@@ -9,7 +9,6 @@
 .post:hover {
     background-color: var(--bg-secundario-hover);
     border: 1px solid var(--cor-border-secundario-hover);
-
 }
 
 .fotoPerfilPost {
@@ -47,7 +46,7 @@
     border: 1px solid var(--cor-border-secundario);
     color: var(--cor-texto-primario);
     padding: 10px 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .nomeUsuarioPost{

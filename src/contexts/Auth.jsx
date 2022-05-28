@@ -24,7 +24,7 @@ export const AuthProvider = ({children}) => {
         
         //console.log(response)
 
-        let response = (email === "usuario1@teste.com" && senha === "senha1" )? {auth:true,nome:"Usuário de teste",token:"qualquer coisa"} : null;
+        let response = (email === "usuario1@teste.com" && senha === "senha1" )? {auth:true,nome:"Usuário de teste",token:"qualquer coisa"} : {auth:false,erro:"Usuário ou senha errado"};
         
         if(response.auth){
             let loggedUser = {
@@ -35,7 +35,7 @@ export const AuthProvider = ({children}) => {
             localStorage.setItem('usuario-tp-web',JSON.stringify(loggedUser))
 
             setUser(loggedUser);
-            navigate("/");
+            navigate("/paginaInicial");
 
             return "Usuario: " + response.nome + ", logado com sucesso na aplicação!";
         }

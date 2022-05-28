@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { MenuUsuario } from './components/MenuUsuario/MenuUsuario';
-import { AuthContext, AuthProvider } from './contexts/Auth';
+import { AuthContext, AuthProvider } from './Contexts/Auth';
 import { Layout } from './components/Layout/Layout';
 import React, { useContext } from 'react';
 import { Login } from './Pages/Login/Login';
@@ -14,7 +14,7 @@ import { MudarSenha } from './Pages/MudarSenha/MudarSenha';
 
 
 function App() {
-  /*const Private = ({children}) => {
+  const Private = ({children}) => {
     const { authenticated,loading } = useContext(AuthContext);
 
     if(loading){
@@ -26,7 +26,7 @@ function App() {
     }
 
     return children;
-  }*/
+  }
 
 
   return (
@@ -37,11 +37,11 @@ function App() {
             <Route path="/" element={<Login/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/cadastro" element={<Cadastro/>}/>
-            <Route path="/mudarSenha" element={<MudarSenha/>}/>
-            <Route path="/meusComentarios" element={<Layout menu={<MenuUsuario/>} areaMain={<MeusComentarios/>} />} />
-            <Route path="/meusPosts" element={<Layout menu={<MenuUsuario/>} areaMain={<MeusPosts/>} />} />
-            <Route path="/editarPerfil" element={<Layout menu={<MenuUsuario/>} areaMain={<EditarPerfil/>} />} />
-            <Route path="/paginaInicial" element={<Layout menu={<MenuUsuario/>} areaMain={<PaginaInicial/>} />} />
+            <Route path="/mudarSenha" element={<Private><MudarSenha/></Private>}/>
+            <Route path="/meusComentarios" element={<Private> <Layout menu={<MenuUsuario/>} areaMain={<MeusComentarios/>} /> </Private>} />
+            <Route path="/meusPosts" element={<Private> <Layout menu={<MenuUsuario/>} areaMain={<MeusPosts/>} /> </Private>}  />
+            <Route path="/editarPerfil" element={<Private> <Layout menu={<MenuUsuario/>} areaMain={<EditarPerfil/>} /> </Private>} />
+            <Route path="/paginaInicial" element={<Private> <Layout menu={<MenuUsuario/>} areaMain={<PaginaInicial/>} /> </Private>} />
           </Routes>
         </AuthProvider>
       </BrowserRouter>
