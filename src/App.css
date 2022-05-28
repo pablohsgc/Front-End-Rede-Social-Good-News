@@ -13,11 +13,11 @@
     --cor-texto-primario-hover: rgb(65, 65, 65);
     --cor-texto-secundario: rgb(56, 56, 56);
     --cor-botao-primario: #03C3FF;
-    --cor-botao-primario-hover: #65dbff;    
+    --cor-botao-primario-hover: #65dbff;
 }
 
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark) {
     :root {
         --bg-primario: #2c2b2b;
         --bg-secundario: #383838a8;
@@ -28,6 +28,6 @@
         --cor-texto-primario-hover: #b3b3b3;
         --cor-texto-secundario: #a8a8a8;
         --cor-botao-primario: #1e90ff;
-        --cor-botao-primario-hover: #005bb6;                
+        --cor-botao-primario-hover: #005bb6;        
     }
 }
