@@ -9,6 +9,7 @@ import { MeusComentarios } from './Pages/MeusComentarios/MeusComentarios';
 import { MeusPosts } from './Pages/MeusPosts/MeusPosts';
 import { EditarPerfil } from './Pages/EditarPerfil/EditarPerfil';
 import { PaginaInicial } from './Pages/PaginaInicial/PaginaInicial';
+import { Cadastro } from './Pages/Cadastro/Cadastro';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Login/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/cadastro" element={<Cadastro/>}/>
             <Route path="/meusComentarios" element={<Layout menu={<MenuUsuario/>} areaMain={<MeusComentarios/>} />} />
             <Route path="/meusPosts" element={<Layout menu={<MenuUsuario/>} areaMain={<MeusPosts/>} />} />
             <Route path="/editarPerfil" element={<Layout menu={<MenuUsuario/>} areaMain={<EditarPerfil/>} />} />

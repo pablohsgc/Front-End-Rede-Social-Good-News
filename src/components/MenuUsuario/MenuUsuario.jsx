@@ -23,7 +23,7 @@ export function MenuUsuario() {
                 <li>
                     <a href="/meusPosts">
                         <SvgIcon component={BookmarkBorderOutlinedIcon} sx={{ fontSize: 24 }} />&nbsp;
-                        Meus Posts
+                        Meus Posts                        
                     </a>
                 </li>
                 <li>
