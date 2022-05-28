@@ -1,12 +1,17 @@
 import "./Login.css";
 import {useState,useContext} from 'react';
 import { AuthContext } from '../../Contexts/Auth';
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
-    const {login} = useContext(AuthContext);
-  
+    const {login,user} = useContext(AuthContext);
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+
+    if(user){
+        navigate("/paginaInicial");
+    }
 
     const handleSubmit = async () => {
         console.log(email + " - " + senha);
