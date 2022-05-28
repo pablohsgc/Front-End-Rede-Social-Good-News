@@ -1,33 +1,36 @@
-.modal-content{
+.modal-content {
     background-color: var(--cor-border-secundario);
     border-radius: 10px;
     padding: 10px;
 }
 
-.close{
+.close {
     color: var(--cor-bg-primario);
     border: solid 1px var(--cor-bg-secundario);
     border-radius: 5px;
+    width: 20px;
+    height: 20px;
 }
 
-.modal-title, .col-form-label{
+.modal-title,
+.col-form-label {
     color: var(--cor-texto-primario);
 }
 
-.form-control{
+.form-control {
     background-color: var(--bg-secundario);
     border-radius: 10px;
     border: 1px solid var(--cor-border-secundario);
     color: var(--cor-texto-primario);
 }
 
-.form-control:hover{
+.form-control:hover {
     background-color: var(--bg-secundario-hover);
     border: 1px solid var(--cor-border-secundario-hover);
     color: var(--cor-texto-primario-hover);
 }
 
-.form-control:focus{
+.form-control:focus {
     background-color: var(--bg-secundario-hover);
     border: 1px solid var(--cor-border-secundario-hover);
     color: var(--cor-texto-primario-hover);

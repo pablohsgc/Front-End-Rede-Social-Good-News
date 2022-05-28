@@ -4,7 +4,7 @@ export function EditarPerfil(props) {
     return (
         <>
             <button type="button" class="botaoPost" data-bs-toggle="modal" data-bs-target="#editarPerfil">
-                Criar Post
+                Editar Perfil
             </button>
 
             <div class="modal fade" id="editarPerfil" tabindex="-1" aria-labelledby="editarPerfilLabel" aria-hidden="true">
@@ -12,7 +12,7 @@ export function EditarPerfil(props) {
                     <div class="modal-content">
                         <div class="modal-header">
                             <h2 class="modal-title" id="editarPerfilLabel">Editar Perfil</h2>                            
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -32,7 +32,7 @@ export function EditarPerfil(props) {
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                             <button type="button" class="btn btn-primary">Salvar</button>
                         </div>
                     </div>
