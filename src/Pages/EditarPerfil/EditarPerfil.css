@@ -1,5 +1,6 @@
 .modal-content {
-    background-color: var(--cor-border-secundario);
+    background-color: var(--bg-primario);
+    padding: 65px 40px 20px 40px;
     border-radius: 10px;
     padding: 10px;
 }
@@ -28,9 +29,14 @@
     color: var(--cor-texto-primario-hover);
 }
 
+.form-group{
+    margin-bottom: 10px;
+}
+
 .divFoto-editarPerfil {
     width: 80px;
     height: 80px;
+    background-size: cover;
     background-color: black;
     border-radius: 50%;
     margin: 0 auto;

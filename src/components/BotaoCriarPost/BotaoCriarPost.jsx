@@ -16,7 +16,7 @@ export function BotaoCriarPost() {
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Postagem:</label>
-                        <input type="text" class="form-control" id="recipient-name" /><br />
+                        <textarea class="form-control" id="message-text"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
