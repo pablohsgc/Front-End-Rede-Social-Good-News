@@ -7,7 +7,6 @@ export function EditarPerfil(props) {
                 Criar Post
             </button>
 
-
             <div class="modal fade" id="editarPerfil" tabindex="-1" aria-labelledby="editarPerfilLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">

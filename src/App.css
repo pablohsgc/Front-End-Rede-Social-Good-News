@@ -9,9 +9,10 @@
     --cor-border-secundario: #c4c4c4;
     --cor-border-secundario-hover: #c4c4c4;
     --cor-texto-primario: #333;
-    --cor-texto-primario-hover: #505050;
+    --cor-texto-primario-hover: rgb(65, 65, 65);
+    --cor-texto-secundario: rgb(56, 56, 56);
     --cor-botao-primario: #03C3FF;
-    --cor-botao-primario-hover: #65dbff;
+    --cor-botao-primario-hover: #65dbff;    
 }
 
 
@@ -24,7 +25,8 @@
         --cor-border-secundario-hover: #505050;
         --cor-texto-primario: #f3f3f3;
         --cor-texto-primario-hover: #b3b3b3;
+        --cor-texto-secundario: #a8a8a8;
         --cor-botao-primario: #1e90ff;
-        --cor-botao-primario-hover: #005bb6;
+        --cor-botao-primario-hover: #005bb6;                
     }
 }

@@ -1,4 +1,5 @@
 import { Post } from "../../components/Post/Post";
+import "./PaginaInicial.css";
 
 export function PaginaInicial() {
     return (
