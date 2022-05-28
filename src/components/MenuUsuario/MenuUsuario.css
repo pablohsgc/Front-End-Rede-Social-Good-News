@@ -27,8 +27,15 @@
     font-size: 22px;
 }
 
-.menu a {
+.menu a {    
     color: var(--cor-texto-primario);
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--cor-texto-primario);
+    font-weight: bold;
     text-decoration: none;
 }
 

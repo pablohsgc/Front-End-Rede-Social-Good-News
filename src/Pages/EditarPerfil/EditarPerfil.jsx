@@ -12,9 +12,7 @@ export function EditarPerfil(props) {
                     <div class="modal-content">
                         <div class="modal-header">
                             <h2 class="modal-title" id="editarPerfilLabel">Editar Perfil</h2>                            
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                                
                         </div>
                         <div class="modal-body">
                             <div className='divFoto-editarPerfil'>

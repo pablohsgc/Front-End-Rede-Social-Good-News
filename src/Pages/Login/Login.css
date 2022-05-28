@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
     font-family: "Quicksand", sans-serif;
 }
 
@@ -118,10 +117,6 @@ form input[type="submit"] {
     text-align: center;
     color: var(--cor-texto-secundario);
     font-weight: bold;
-}
-
-a:hover{
-    color: var(--cor-texto-primario-hover);
 }
 
 #forgot-password {

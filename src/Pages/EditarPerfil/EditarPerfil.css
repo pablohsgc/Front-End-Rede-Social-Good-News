@@ -4,14 +4,6 @@
     padding: 10px;
 }
 
-.close {
-    color: var(--cor-bg-primario);
-    border: solid 1px var(--cor-bg-secundario);
-    border-radius: 5px;
-    width: 20px;
-    height: 20px;
-}
-
 .modal-title,
 .col-form-label {
     color: var(--cor-texto-primario);
