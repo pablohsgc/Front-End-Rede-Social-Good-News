@@ -59,7 +59,6 @@
     color: var(--cor-texto-primario);
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
     cursor: pointer;
     margin-right: 20px;
 }
