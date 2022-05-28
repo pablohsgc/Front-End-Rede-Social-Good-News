@@ -1,0 +1,10 @@
+
+#botao-voltar-home{
+    color: var(--cor-texto-primario);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#botao-voltar-home:hover{
+    color: var(--cor-texto-primario-hover);
+}
