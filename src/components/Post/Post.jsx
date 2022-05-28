@@ -1,9 +1,4 @@
 import './Post.css';
-/*
-import like from '../../assets/like.png';
-import deslike from '../../assets/deslike.png';
-import comentario from '../../assets/comentario.png';
-*/
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 import { SvgIcon, Button } from '@mui/material';

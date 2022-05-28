@@ -3,7 +3,7 @@ import './Layout.css';
 export function Layout(props){
     return (
         <>
-        <div className="app row">
+        <div className="app">
             <aside className='aside-lateral'>
                 {
                     props.menu

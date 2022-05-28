@@ -7,13 +7,13 @@ import perfil from '../../assets/perfil-de-usuario.png';
 import comentario from '../../assets/comentario.png';
 import home from '../../assets/home.png';
 */
-import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
-import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
-import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
+//import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
+//import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import { SvgIcon } from '@mui/material';
+import { BotaoModalEditarPerfil } from '../BotaoModalEditarPerfil/BotaoModalEditarPerfil';
 
 export function MenuUsuario() {
     return (
@@ -27,10 +27,7 @@ export function MenuUsuario() {
                     </a>
                 </li>
                 <li>
-                    <a href="/editarPerfil">
-                        <SvgIcon component={PermIdentityOutlinedIcon} sx={{ fontSize: 24 }} />&nbsp;
-                        Editar Perfil
-                    </a>
+                    <BotaoModalEditarPerfil/>
                 </li>
                 <li>
                     <a href="/meusComentarios">

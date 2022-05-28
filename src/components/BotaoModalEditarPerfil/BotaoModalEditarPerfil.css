@@ -1,0 +1,64 @@
+.modal-content {
+    background-color: var(--bg-primario);
+    padding: 65px 40px 20px 40px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.modal-title,
+.col-form-label {
+    color: var(--cor-texto-primario);
+}
+
+.form-control {
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    border: 1px solid var(--cor-border-secundario);
+    color: var(--cor-texto-primario);
+}
+
+.form-control:hover {
+    background-color: var(--bg-secundario-hover);
+    border: 1px solid var(--cor-border-secundario-hover);
+    color: var(--cor-texto-primario-hover);
+}
+
+.form-control:focus {
+    background-color: var(--bg-secundario-hover);
+    border: 1px solid var(--cor-border-secundario-hover);
+    color: var(--cor-texto-primario-hover);
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.divFoto-editarPerfil {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.botaoModalEditarPerfil{
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 400px;
+    font-size: inherit;
+    border: none;
+    background-color: inherit;
+    color: var(--cor-texto-primario);
+    padding: inherit;
+}
+
+.botaoModalEditarPerfil:hover{
+    color: var(--cor-texto-primario-hover);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botaoModalEditarPerfil:focus{
+    outline: 0;
+}

@@ -2,8 +2,7 @@ import "./Login.css";
 
 export function Login() {
     return (
-        <>
-            
+        <>   
             <body class="flex">
                 <div class="container">
                     <div class="user"></div>
