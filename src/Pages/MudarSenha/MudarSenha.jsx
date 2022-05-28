@@ -22,8 +22,8 @@ export function MudarSenha() {
                             <label>Repita nova senha</label>
                         </div>
                         <div class="line"></div>
-                        <div>
-                            <input type="submit" value="Salvar"  />
+                        <div id="footer-mudar-senha">
+                            <input id="btn-mudar-senha" type="submit" value="Salvar"  />
                             <a id="botao-voltar-home" href="/paginaInicial">Voltar</a>
                         </div>
                     </form>
