@@ -25,6 +25,7 @@ body {
 }
 
 .user {    
+    background-image: url("/src/logo.png");
     background-size: cover;
     width: 90px;
     height: 90px;
