@@ -27,3 +27,7 @@
     padding: 20px;
     background-color: var(--bg-secundario);
 }
+
+.texto{
+    color: var(--cor-texto-primario);
+}
