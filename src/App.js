@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { MenuUsuario } from './components/MenuUsuario/MenuUsuario';
-import { AuthContext, AuthProvider } from './Contexts/Auth';
+import { AuthContext, AuthProvider } from './contexts/Auth';
 import { Layout } from './components/Layout/Layout';
 import React, { useContext } from 'react';
 import { Login } from './Pages/Login/Login';

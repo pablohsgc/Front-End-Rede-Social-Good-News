@@ -2,7 +2,7 @@ import './CardPerfil.css';
 import { SvgIcon } from '@mui/material';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import {useContext} from 'react';
-import { AuthContext } from '../../Contexts/Auth';
+import { AuthContext } from '../../contexts/Auth';
 
 export function CardPerfil(){
     const {logout, user} = useContext(AuthContext); 

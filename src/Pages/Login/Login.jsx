@@ -1,6 +1,6 @@
 import "./Login.css";
 import {useState,useContext} from 'react';
-import { AuthContext } from '../../Contexts/Auth';
+import { AuthContext } from '../../contexts/Auth';
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
@@ -40,7 +40,7 @@ export function Login() {
                     </form>
                     <div class="div">
                         <div class="line"></div>
-                        <div class="signup">Don't Have an account? <a href="#">Sign Up</a></div>
+                        <div class="signup">Don't Have an account? <a href="/cadastro">Sign Up</a></div>
                     </div>
                 </div>
             </body>
