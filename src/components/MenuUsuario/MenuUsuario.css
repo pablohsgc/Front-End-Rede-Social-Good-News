@@ -33,12 +33,7 @@
 }
 
 .menu a:hover {
-    color: var(--cor-texto-primario);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.menu a:hover {
     /*Temporario*/
     color: var(--cor-texto-primario-hover);
+    text-decoration: none;
 }

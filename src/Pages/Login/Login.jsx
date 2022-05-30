@@ -34,13 +34,13 @@ export function Login() {
                         <div class="input box">
                             <input type="password" value={senha} onChange={e => setSenha(e.target.value)} required />
                             <label>Password</label>
-                            <div class="forgot"><a id="forgot-password" href="#">Forgot Password?</a></div>
+                            <div class="forgot"><a id="forgot-password" href="#">Esqueceu sua senha?</a></div>
                         </div>
                         <input type="submit" value="Login" onClick={handleSubmit}/>
                     </form>
                     <div class="div">
                         <div class="line"></div>
-                        <div class="signup">Don't Have an account? <a href="/cadastro">Sign Up</a></div>
+                        <div class="signup">Não tem uma conta? <a href="/cadastro">Cadastre-se</a></div>
                     </div>
                 </div>
             </body>

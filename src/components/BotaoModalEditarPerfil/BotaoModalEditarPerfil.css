@@ -55,7 +55,6 @@
 
 .botaoModalEditarPerfil:hover{
     color: var(--cor-texto-primario-hover);
-    font-weight: bold;
     text-decoration: none;
 }
 
