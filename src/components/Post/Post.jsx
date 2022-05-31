@@ -6,12 +6,15 @@ import { ButtonModalComentarios } from '../ButtonModalComentarios/ButtonModalCom
 
 
 export function Post(props) {
+    const foto = props.fotoUsuario;
+
     return (
         <article className="post">
             <div className="cabecalhoPost">
                 <div className="usuarioPost">
-                    <img className="fotoPerfilPost" />
+                    <img className="fotoPerfilPost" src={foto} alt="Foto de perfil"/>
                     <span className="nomeUsuarioPost">{props.nomeUsuario}</span>
+                    <span className="dataComentario">{props.data}</span>
                 </div>
                 <div className="relevancia">
                     <div className="relevanciaTopo">

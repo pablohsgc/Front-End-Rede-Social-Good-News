@@ -6,11 +6,12 @@ import { AuthContext } from '../../contexts/Auth';
 
 export function CardPerfil(){
     const {logout, user} = useContext(AuthContext); 
+    const foto = user.fotoUsuario;
 
     return (
         <div className='cardPerfil'>
             <div className='divFoto'>
-                <img className="fotoPerfil"/>
+                <img className="fotoPerfil" src={foto} alt="Foto de perfil do usuario"/>
             </div>
             <div className='divInfoUsuario'>
                 <span className='nomeUsuario'>{user.nomeUsuario}</span><br/>

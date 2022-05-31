@@ -12,8 +12,11 @@
 }
 
 .fotoPerfilPost {
-    background-color: rgb(236, 15, 15);
-    padding: 40px;
+    /*background-color: rgb(236, 15, 15);*/
+    background-color: #0d6efd;
+    width: 70px;
+    height: 70px;
+    padding: 1px;
     border-radius: 100%;
 }
 

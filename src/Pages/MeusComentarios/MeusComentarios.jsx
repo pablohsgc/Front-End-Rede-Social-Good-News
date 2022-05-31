@@ -1,16 +1,36 @@
-import Comentario from "../../components/Comentario/Comentario";
 import { Post } from "../../components/Post/Post";
+import { useState, useEffect } from 'react'
+import { RequisitaMeusComentarios } from "../../api/Requisocoes";
+
 
 export function MeusComentarios(props) {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+
+        async function listaPosts() {
+            const response = await RequisitaMeusComentarios();
+            if (response.erro) {
+                alert(response.erro);
+            }else{
+                setPosts(response);
+            }            
+        }
+
+        listaPosts();
+    }, []);
+
     return (
         <>
             <h1 className="texto-primario">Meus Comentários</h1>
             
-            <section>                
-                <Post idPost={"post1"} nomeUsuario={"USR Teste"} porcentagem={"50"} postagem={"Post teste"} comentarios={[{ nomeUsuario: "Usuário de teste", data: "24-04-2022", postagem: "O primeiro comentario" }, { nomeUsuario: "Usuario 2", data: "24-04-2022", postagem: "O segundo comentario" }, { nomeUsuario: "Usuario 3", data: "25-05-2022", postagem: "O terceiro comentario" }]}></Post>
-                <Post idPost={"post5"} nomeUsuario={"USR 1"} porcentagem={"40"} postagem={"Post teste 10"} comentarios={[{ nomeUsuario: "Usuário de teste", data: "24-04-2022", postagem: "O primeiro comentario" }, { nomeUsuario: "Usuario 2", data: "24-04-2022", postagem: "O segundo comentario" }]}></Post>
-                <Post idPost={"post12"} nomeUsuario={"USR 1"} porcentagem={"80"} postagem={"Postagem 12"} comentarios={[{ nomeUsuario: "Usuário de teste", data: "24-04-2022", postagem: "O primeiro comentario" }]}></Post>
-            </section>
+            {
+                posts.map((post,indice) => 
+                    (
+                        <Post idPost={post.idPost} nomeUsuario={post.nomeUsuario} fotoUsuario={post.fotoUsuario} data={post.data} porcentagem={post.porcentagem} postagem={post.postagem} comentarios={post.comentarios} key={indice} />
+                    )
+                )
+            }
         </>
     );
 }

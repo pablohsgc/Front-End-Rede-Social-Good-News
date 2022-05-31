@@ -9,3 +9,23 @@ export async function RequisitaPosts() {
         throw erro;
     })
 }
+
+export async function RequisitaMeusPosts() {
+    return await fetch(URL_BASE + "/meusPosts.json")
+    .then(response => response.json())
+    .then((json) => {
+        return json
+    }).catch((erro) => {
+        throw erro;
+    })
+}
+
+export async function RequisitaMeusComentarios() {
+    return await fetch(URL_BASE + "/comentarios.json")
+    .then(response => response.json())
+    .then((json) => {
+        return json
+    }).catch((erro) => {
+        throw erro;
+    })
+}

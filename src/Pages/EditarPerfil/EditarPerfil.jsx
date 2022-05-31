@@ -1,6 +1,11 @@
 import "./EditarPerfil.css";
+import {useContext} from 'react';
+import { AuthContext } from '../../contexts/Auth';
 
-export function EditarPerfil(props) {
+export function EditarPerfil() {
+    const {user} = useContext(AuthContext);
+    const foto = user.fotoUsuario;
+
     return (
         <>
             <button type="button" class="botaoPost" data-bs-toggle="modal" data-bs-target="#editarPerfil">
@@ -16,7 +21,7 @@ export function EditarPerfil(props) {
                         </div>
                         <div class="modal-body">
                             <div className='divFoto-editarPerfil'>
-                                <img className="fotoPerfil" />
+                                <img className="fotoPerfil" src={foto} alt="Foto de perfil do usuario"/>
                             </div>
                             <form>
                                 <div class="form-group">

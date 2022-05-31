@@ -1,8 +1,15 @@
 import './BotaoModalEditarPerfil.css';
 import { SvgIcon } from "@mui/material";
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
+import {useContext} from 'react';
+import { AuthContext } from '../../contexts/Auth';
+
 
 export function BotaoModalEditarPerfil() {
+    const {user} = useContext(AuthContext);
+    const foto = user.fotoUsuario;
+
+
     return(
         <>
             <button className="botaoModalEditarPerfil" data-bs-toggle="modal" data-bs-target="#editarPerfil">
@@ -19,7 +26,7 @@ export function BotaoModalEditarPerfil() {
                         </div>
                         <div class="modal-body">
                             <div className='divFoto-editarPerfil'>
-                                <img className="fotoPerfil" />
+                                <img className="fotoPerfil" src={foto} alt="Foto de perfil do usuario"/>
                             </div>
                             <form>
                                 <div class="form-group">

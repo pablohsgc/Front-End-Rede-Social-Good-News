@@ -24,15 +24,16 @@ export const AuthProvider = ({children}) => {
         
         //console.log(response)
 
-        let response = (email === "usuario1@teste.com" && senha === "senha1" )? {auth:true,nome:"Usuário de teste",token:"qualquer coisa"} : {auth:false,erro:"Usuário ou senha errado"};
+        let response = (email === "usuario1@teste.com" && senha === "senha1" )? {auth:true,nome:"Perfil 1",token:"qualquer coisa",fotoUsuario:"https://pablohsg.github.io/Requisicoes/API/imgs/perfil1.jpg"} : {auth:false,erro:"Usuário ou senha errado"};
         
         if(response.auth){
             let loggedUser = {
                 nomeUsuario:response.nome,
-                token:response.token
+                token:response.token,
+                fotoUsuario:response.fotoUsuario
             }
 
-            localStorage.setItem('usuario-tp-web',JSON.stringify(loggedUser))
+            localStorage.setItem('usuario-tp-web',JSON.stringify(loggedUser));
 
             setUser(loggedUser);
             navigate("/paginaInicial");

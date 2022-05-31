@@ -9,6 +9,7 @@
     width: 80px;
     height: 80px;
     background-color: black;
+    padding: 1px;
     border-radius: 100%;
 }
 
@@ -35,6 +36,7 @@
 }
 
 .botaoSair:hover{
+    font-weight: bold;
     color: var(--cor-texto-primario-hover);
 }
 

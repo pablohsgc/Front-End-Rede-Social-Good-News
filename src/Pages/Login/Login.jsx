@@ -14,7 +14,6 @@ export function Login() {
     }
 
     const handleSubmit = async () => {
-        console.log(email + " - " + senha);
         let response = await login(email,senha);
         //console.log("Response handlesubmit: ",response);
         alert(response);

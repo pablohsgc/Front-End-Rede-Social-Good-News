@@ -27,7 +27,7 @@ export function PaginaInicial() {
             {
                 posts.map((post,indice) => 
                     (
-                        <Post idPost={post.idPost} nomeUsuario={post.nomeUsuario} porcentagem={post.porcentagem} postagem={post.postagem} comentarios={post.comentarios} key={indice} />
+                        <Post idPost={post.idPost} nomeUsuario={post.nomeUsuario} fotoUsuario={post.fotoUsuario} data={post.data} porcentagem={post.porcentagem} postagem={post.postagem} comentarios={post.comentarios} key={indice} />
                     )
                 )
             }

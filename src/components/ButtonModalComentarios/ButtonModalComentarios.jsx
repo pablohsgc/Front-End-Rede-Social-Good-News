@@ -26,7 +26,7 @@ export function ButtonModalComentarios(props){
               <div class="modal-body">
                 {
                  props.comentarios.map((comentario,indice) => (
-                    <Comentario nomeUsuario={comentario.nomeUsuario} data={comentario.data} postagem={comentario.postagem} key={indice}></Comentario>
+                    <Comentario nomeUsuario={comentario.nomeUsuario} fotoUsuario={comentario.fotoUsuario} data={comentario.data} postagem={comentario.postagem} key={indice}></Comentario>
                   ))
                 }
               </div>
