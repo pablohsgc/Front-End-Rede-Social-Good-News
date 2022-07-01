@@ -38,13 +38,14 @@ body {
 
 form h1 {
     text-align: center;
+    margin-bottom: 25px;
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
     color: var(--cor-texto-primario);
 }
 
 .input {
-    margin: 20px 0;
+    margin: 25px 0;
     position: relative;
 }
 
@@ -115,7 +116,7 @@ form input[type="submit"]:hover {
 }
 
 .signup {
-    font-size: 12px;
+    font-size: 16px;
     padding: 2px;
     text-align: center;
     color: var(--cor-texto-secundario);

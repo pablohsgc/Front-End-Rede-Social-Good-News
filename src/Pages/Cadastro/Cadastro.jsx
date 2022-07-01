@@ -8,7 +8,11 @@ export function Cadastro() {
                 <div class="container cadastro">
                     <div class="user"></div>
                     <form>
-                        <h1>Cadastro </h1>
+                        <h1>Cadastro</h1>
+                        <div class="input">
+                            <input type="text" required />
+                            <label>Nome Completo</label>
+                        </div>
                         <div class="input">
                             <input type="text" required />
                             <label>Username</label>

@@ -25,7 +25,7 @@ export function Login() {
                 <div class="container">
                     <div class="user"></div>
                     <form>
-                        <h1>Log In </h1>
+                        <h1>Log In</h1>
                         <div class="input">
                             <input type="text" value={email} onChange={e => setEmail(e.target.value)} required />
                             <label>Username</label>
