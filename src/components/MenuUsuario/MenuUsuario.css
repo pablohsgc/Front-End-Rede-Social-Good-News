@@ -34,7 +34,6 @@
 }
 
 .menu a:hover {
-    /*Temporario*/
     color: var(--cor-texto-primario-hover);
     text-decoration: none;
     font-weight: bold;
