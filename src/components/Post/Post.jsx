@@ -3,6 +3,7 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 import { SvgIcon, Button } from '@mui/material';
 import { ButtonModalComentarios } from '../ButtonModalComentarios/ButtonModalComentarios';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 
 export function Post(props) {
@@ -12,7 +13,7 @@ export function Post(props) {
         <article className="post">
             <div className="cabecalhoPost">
                 <div className="usuarioPost">
-                    <img className="fotoPerfilPost" src={foto} alt="Foto de perfil"/>
+                    <img className="fotoPerfilPost" src={foto} alt="Foto de perfil" />
                     <span className="nomeUsuarioPost">{props.nomeUsuario}</span>
                     <span className="dataComentario">{props.data}</span>
                 </div>
@@ -27,35 +28,14 @@ export function Post(props) {
                 </div>
             </div>
             <div className="texto">{props.postagem}</div>
-            <Button><SvgIcon component={ThumbUpOutlinedIcon} fontSize="medium" /></Button>
-            <Button><SvgIcon component={ThumbDownAltOutlinedIcon} fontSize="medium" /></Button>
-            <ButtonModalComentarios quantidade={props.comentarios.length} comentarios={props.comentarios} idPost={props.idPost}></ButtonModalComentarios>
+            <div className="rodapePost">
+                <div>
+                    <Button><SvgIcon component={ThumbUpOutlinedIcon} fontSize="medium" /></Button>
+                    <Button><SvgIcon component={ThumbDownAltOutlinedIcon} fontSize="medium" /></Button>
+                    <ButtonModalComentarios quantidade={props.comentarios.length} comentarios={props.comentarios} idPost={props.idPost}></ButtonModalComentarios>
+                </div>
+                {props.tipoMeuPost && <Button><SvgIcon className="btn-delete" component={DeleteOutlineIcon} fontSize="medium" /></Button>}
+            </div>
         </article>
     );
 }
-/*
-export function Post(props) {
-    return (
-        <article className="post">
-            <div className="cabecalhoPost">
-                <div className="usuarioPost">
-                    <img className="fotoPerfilPost"/>
-                    <span className="nomeUsuarioPost">{props.nomeUsuario}</span>
-                </div>
-                <div className="relevancia">
-                    <div className="relevanciaTopo">
-                        <span>Relevancia</span>
-                        <span>{props.porcentagem}%</span>
-                    </div>
-                    <div className="relevanciaFundo">
-                        <progress  className="progress-relevancia" value={props.porcentagem} max="100">{props.porcentagem}%</progress>
-                    </div>
-                </div>
-            </div>
-            <div className="texto">{props.postagem}</div>
-            <img src={like} alt="Gostei" />
-            <img src={deslike} alt="Nao Gostei" />
-            <img src={comentario} alt="Comentarios" />
-        </article>
-    );
-}*/
