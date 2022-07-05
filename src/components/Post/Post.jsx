@@ -5,6 +5,12 @@ import { SvgIcon, Button } from '@mui/material';
 import { ButtonModalComentarios } from '../ButtonModalComentarios/ButtonModalComentarios';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
+const handleDeletePost = async (idPost) => {
+    /*let response = await RequisitaDeletePost(idPost); // implementar função de deletar post
+    if (response.erro) {
+        alert(response.erro);
+    }*/
+}
 
 export function Post(props) {
     const foto = props.fotoUsuario;
@@ -34,7 +40,7 @@ export function Post(props) {
                     <Button><SvgIcon component={ThumbDownAltOutlinedIcon} fontSize="medium" /></Button>
                     <ButtonModalComentarios quantidade={props.comentarios.length} comentarios={props.comentarios} idPost={props.idPost}></ButtonModalComentarios>
                 </div>
-                {props.tipoMeuPost && <Button><SvgIcon className="btn-delete" component={DeleteOutlineIcon} fontSize="medium" /></Button>}
+                {props.tipoMeuPost && <Button onClick={handleDeletePost}><SvgIcon className="btn-delete" component={DeleteOutlineIcon} fontSize="medium" /></Button>}
             </div>
         </article>
     );
