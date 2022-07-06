@@ -1,21 +1,31 @@
 import './BotaoModalEditarPerfil.css';
 import { SvgIcon } from "@mui/material";
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
-import {useContext} from 'react';
+import PhotoCamera from '@mui/icons-material/PhotoCameraOutlined';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/Auth';
 
 
 export function BotaoModalEditarPerfil() {
     const {user} = useContext(AuthContext);
-    const foto = user.fotoUsuario;
+    const [urlFoto,setUrlFoto] = useState(user.fotoUsuario); 
+    const [imagem,setImagem] = useState(null);
 
-
+    const alteraImagem = (event) => {
+        const file = event.target.files[0];
+        
+        if(!file) return;
+        console.log(process.env)
+        let urlLocalImagem = URL.createObjectURL(event.target.files[0]);
+        setUrlFoto(urlLocalImagem);
+        setImagem(file);
+    }
     return(
         <>
             <button className="botaoModalEditarPerfil" data-bs-toggle="modal" data-bs-target="#editarPerfil">
                 <SvgIcon component={PermIdentityOutlinedIcon} sx={{ fontSize: 24 }} />&nbsp;
                 Editar Perfil
-            </button>
+            </button> 
 
             <div class="modal fade" id="editarPerfil" tabindex="-1" aria-labelledby="editarPerfilLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -26,7 +36,11 @@ export function BotaoModalEditarPerfil() {
                         </div>
                         <div class="modal-body">
                             <div className='divFoto-editarPerfil'>
-                                <img className="fotoPerfil" src={foto} alt="Foto de perfil do usuario"/>
+                                <img className="fotoPerfil" src={urlFoto} alt="Foto de perfil do usuario"/>
+                                <label className="label-input-imagem">
+                                    <SvgIcon component={PhotoCamera} sx={{ fontSize: 22 }} className="icone-camera" />
+                                    <input type="file" className="input-imagem" accept="image/*" onChange={alteraImagem}/>
+                                </label>
                             </div>
                             <form>
                                 <div class="form-group">

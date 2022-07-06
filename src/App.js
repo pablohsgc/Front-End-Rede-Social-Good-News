@@ -12,9 +12,8 @@ import { PaginaInicial } from './Pages/PaginaInicial/PaginaInicial';
 import { Cadastro } from './Pages/Cadastro/Cadastro';
 import { MudarSenha } from './Pages/MudarSenha/MudarSenha';
 
-
 function App() {
-  const Private = ({children}) => {
+  const Private = ({children}) => { 
     const { authenticated,loading } = useContext(AuthContext);
 
     if(loading){
