@@ -4,6 +4,7 @@ import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import PhotoCamera from '@mui/icons-material/PhotoCameraOutlined';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/Auth';
+import { atualizaPerfil } from './AtualizaPerfil';
 
 
 export function BotaoModalEditarPerfil() {
@@ -14,12 +15,22 @@ export function BotaoModalEditarPerfil() {
     const alteraImagem = (event) => {
         const file = event.target.files[0];
         
-        if(!file) return;
-        console.log(process.env)
+        if(!file){ 
+            console.log("!file")
+            return;
+        }
+
         let urlLocalImagem = URL.createObjectURL(event.target.files[0]);
         setUrlFoto(urlLocalImagem);
         setImagem(file);
     }
+
+    const atualiza = async () => {
+        let resposta = await atualizaPerfil("","",imagem);
+        console.log(resposta);
+    }
+
+
     return(
         <>
             <button className="botaoModalEditarPerfil" data-bs-toggle="modal" data-bs-target="#editarPerfil">
@@ -55,7 +66,7 @@ export function BotaoModalEditarPerfil() {
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Salvar</button>
+                            <button type="button" class="btn btn-primary" onClick={atualiza}>Salvar</button>
                         </div>
                     </div>
                 </div>
