@@ -1,6 +1,6 @@
 import { Post } from "../../components/Post/Post";
 import { useState, useEffect } from 'react'
-import { RequisitaMeusComentarios } from "../../api/Requisocoes";
+import { RequisitaMeusComentarios } from "../../api/Requisicoes";
 
 
 export function MeusComentarios(props) {

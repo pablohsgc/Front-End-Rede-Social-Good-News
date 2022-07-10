@@ -1,6 +1,6 @@
 import React,{ createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-//import { RequisitaLogin } from "../api/api";//Adicionar o metodo
+import { RequisitaLogin } from "../api/Requisicoes";
 
 export const AuthContext = createContext();
 
@@ -20,15 +20,15 @@ export const AuthProvider = ({children}) => {
     }, [])
 
     const login = async (email,senha) => {
+        const response = await RequisitaLogin(email,senha);
         //const response = await RequisitaLogin(email,senha);
-        
-        //console.log(response)
 
-        let response = (email === "usuario1@teste.com" && senha === "senha1" )? {auth:true,nome:"Perfil 1",token:"qualquer coisa",fotoUsuario:"https://pablohsg.github.io/Requisicoes/API/imgs/perfil1.jpg"} : {auth:false,erro:"Usuário ou senha errado"};
+        //let response = (email === "usuario1@teste.com" && senha === "senha1" )? {auth:true,nome:"Perfil 1",token:"qualquer coisa",fotoUsuario:"https://pablohsg.github.io/Requisicoes/API/imgs/perfil1.jpg"} : {auth:false,erro:"Usuário ou senha errado"};
         
         if(response.auth){
             let loggedUser = {
-                nomeUsuario:response.nome,
+                nomeUsuario:response.name,
+                username:response.username,
                 token:response.token,
                 fotoUsuario:response.fotoUsuario
             }
@@ -38,7 +38,7 @@ export const AuthProvider = ({children}) => {
             setUser(loggedUser);
             navigate("/paginaInicial");
 
-            return "Usuario: " + response.nome + ", logado com sucesso na aplicação!";
+            return "Usuario: " + loggedUser.nomeUsuario + ", logado com sucesso na aplicação!";
         }
 
         return response.erro;

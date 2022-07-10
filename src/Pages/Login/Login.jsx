@@ -23,7 +23,7 @@ export function Login() {
             <body class="flex">
                 <div class="container">
                     <div class="user"></div>
-                    <form>
+                    <div id="form">
                         <h1>Log In</h1>
                         <div class="input">
                             <input type="text" value={email} onChange={e => setEmail(e.target.value)} required />
@@ -35,7 +35,7 @@ export function Login() {
                             <div class="forgot"><a id="forgot-password" href="#">Esqueceu sua senha?</a></div>
                         </div>
                         <input type="submit" value="Login" onClick={handleSubmit}/>
-                    </form>
+                    </div>
                     <div class="div">
                         <div class="line"></div>
                         <div class="signup">Não tem uma conta? <a href="/cadastro">Cadastre-se</a></div>

@@ -1,7 +1,7 @@
 import "./MeusPosts.css";
 import { Post } from "../../components/Post/Post";
 import { useState, useEffect } from 'react'
-import { RequisitaMeusPosts } from "../../api/Requisocoes";
+import { RequisitaMeusPosts } from "../../api/Requisicoes";
 
 export function MeusPosts() {
     const [posts, setPosts] = useState([]);

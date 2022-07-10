@@ -1,7 +1,7 @@
 import { Post } from "../../components/Post/Post";
 import "./PaginaInicial.css";
 import { useState, useEffect } from 'react'
-import { RequisitaPosts } from "../../api/Requisocoes";
+import { RequisitaPosts } from "../../api/Requisicoes";
 
 export function PaginaInicial() {
     const [posts, setPosts] = useState([]);

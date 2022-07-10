@@ -1,7 +1,7 @@
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase";
 
-export async function atualizaPerfil(novoNome,novaBio,novaFoto){
+export async function atualizaPerfil(novoNome,novaBio,novaFoto,callback){
     if(novaFoto == null) return "Imagem vazia!";
 
     let file = novaFoto;
@@ -12,11 +12,11 @@ export async function atualizaPerfil(novoNome,novaBio,novaFoto){
     return await uploadTask.on("state_changed", 
       snapshot => {},
       error => {
-        return error;
+        callback(error,null);
       },
-      async () => {
-        return await getDownloadURL(uploadTask.snapshot.ref).then( url => {
-          return url;
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then( url => {
+          callback(null,url);
         })
       }
     )

@@ -26,8 +26,13 @@ export function BotaoModalEditarPerfil() {
     }
 
     const atualiza = async () => {
-        let resposta = await atualizaPerfil("","",imagem);
-        console.log(resposta);
+        atualizaPerfil("","",imagem,function(error,url){
+            if(!error){
+                alert(url);
+            }else{
+                alert(error);
+            }
+        });
     }
 
 
