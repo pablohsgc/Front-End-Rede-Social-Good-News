@@ -20,7 +20,7 @@ export async function RequisitaLogin(username,password){
 }
 
 export async function RequisitaPosts() {
-    return await fetch(URL_BASE + "/posts.json")
+    return await fetch(URL_BASE + "/postagens")
     .then(response => response.json())
     .then((json) => {
         return json

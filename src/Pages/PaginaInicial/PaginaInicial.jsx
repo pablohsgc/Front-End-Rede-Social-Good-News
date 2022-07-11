@@ -14,6 +14,7 @@ export function PaginaInicial() {
                 alert(response.erro);
             }else{
                 setPosts(response);
+                console.log(response)
             }            
         }
 
@@ -27,7 +28,7 @@ export function PaginaInicial() {
             {
                 posts.map((post,indice) => 
                     (
-                        <Post idPost={post.idPost} nomeUsuario={post.nomeUsuario} fotoUsuario={post.fotoUsuario} data={post.data} porcentagem={post.porcentagem} postagem={post.postagem} comentarios={post.comentarios} key={indice} />
+                        <Post idPost={post._id} nomeUsuario={post.username} fotoUsuario={post.fotoUsuario} data={post.date} postagem={post.mensagem} comentarios={post.comentarios} likes={post.likes} dislikes={post.dislikes} key={indice} />
                     )
                 )
             }

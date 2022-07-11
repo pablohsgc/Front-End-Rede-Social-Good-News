@@ -6,7 +6,7 @@ import Comentario from '../Comentario/Comentario';
 export function ButtonModalComentarios(props){
     return (
         <>
-        <Button className="iconePost" data-bs-toggle="modal" data-bs-target={"#"+props.idPost}>
+        <Button className="iconePost" data-bs-toggle="modal" data-bs-target={"#P"+props.idPost}>
         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
           {props.quantidade}
           <span class="visually-hidden">unread messages</span>
@@ -15,7 +15,7 @@ export function ButtonModalComentarios(props){
         </Button>
 
       
-        <div class="modal fade" id={props.idPost} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id={"P"+props.idPost} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-xl modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
@@ -26,7 +26,7 @@ export function ButtonModalComentarios(props){
               <div class="modal-body">
                 {
                  props.comentarios.map((comentario,indice) => (
-                    <Comentario nomeUsuario={comentario.nomeUsuario} fotoUsuario={comentario.fotoUsuario} data={comentario.data} postagem={comentario.postagem} key={indice}></Comentario>
+                    <Comentario nomeUsuario={comentario.username} fotoUsuario={comentario.fotoUsuario} data={comentario.data} postagem={comentario.mensagem} key={indice}></Comentario>
                   ))
                 }
               </div>

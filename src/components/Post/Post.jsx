@@ -1,5 +1,6 @@
 import './Post.css';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
+//import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 import { SvgIcon, Button } from '@mui/material';
 import { ButtonModalComentarios } from '../ButtonModalComentarios/ButtonModalComentarios';
@@ -14,6 +15,10 @@ const handleDeletePost = async (idPost) => {
 
 export function Post(props) {
     const foto = props.fotoUsuario;
+    
+    const qtdLikes = props.likes.length;
+    const qtdDislikes = props.dislikes.length;
+    const porcentagem = ((qtdLikes + qtdDislikes) === 0)? 0 : qtdLikes/(qtdLikes + qtdDislikes) * 100;
 
     return (
         <article className="post">
@@ -26,10 +31,10 @@ export function Post(props) {
                 <div className="relevancia">
                     <div className="relevanciaTopo">
                         <span>Relevancia</span>
-                        <span>{props.porcentagem}%</span>
+                        <span>{porcentagem}%</span>
                     </div>
                     <div className="relevanciaFundo">
-                        <progress className="progress-relevancia" value={props.porcentagem} max="100">{props.porcentagem}%</progress>
+                        <progress className="progress-relevancia" value={porcentagem} max="100">{porcentagem}%</progress>
                     </div>
                 </div>
             </div>
