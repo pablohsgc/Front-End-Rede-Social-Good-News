@@ -1,7 +1,7 @@
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from "../../firebase";
 
-export async function atualizaPerfil(novoNome,novaBio,novaFoto,username,callback){
+export async function atualizaPerfil(novaFoto,username,callback){
     if(novaFoto == null) return "Imagem vazia!";
 
     let file = novaFoto;

@@ -10,9 +10,11 @@ export function MeusComentarios(props) {
 
         async function listaPosts() {
             const response = await RequisitaMeusComentarios();
+
             if (response.erro) {
                 alert(response.erro);
             }else{
+                response.reverse();
                 setPosts(response);
             }            
         }
@@ -27,7 +29,7 @@ export function MeusComentarios(props) {
             {
                 posts.map((post,indice) => 
                     (
-                        <Post idPost={post.idPost} nomeUsuario={post.nomeUsuario} fotoUsuario={post.fotoUsuario} data={post.data} porcentagem={post.porcentagem} postagem={post.postagem} comentarios={post.comentarios} key={indice} />
+                        <Post idPost={post._id} nomeUsuario={post.username} fotoUsuario={post.fotoUsuario} data={post.date} postagem={post.mensagem} comentarios={post.comentarios} likes={post.likes} dislikes={post.dislikes} key={indice} />
                     )
                 )
             }

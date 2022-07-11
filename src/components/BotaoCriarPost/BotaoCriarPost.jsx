@@ -1,11 +1,18 @@
 import { useState } from 'react';
+import { RequisitaCriarPost } from '../../api/Requisicoes';
 import './BotaoCriarPost.css';
 
 export function BotaoCriarPost() {
     const [postagem,setPostagem] = useState("");
 
-    const postar = () => {
-        
+    const postar = async () => {
+        let resposta = await RequisitaCriarPost(postagem);
+
+        if(resposta.erro){
+            alert(resposta.erro);
+        }else{
+            window.location.reload();
+        }   
     }
 
     return (<>

@@ -13,8 +13,8 @@ export function PaginaInicial() {
             if (response.erro) {
                 alert(response.erro);
             }else{
+                response.reverse();
                 setPosts(response);
-                console.log(response)
             }            
         }
 

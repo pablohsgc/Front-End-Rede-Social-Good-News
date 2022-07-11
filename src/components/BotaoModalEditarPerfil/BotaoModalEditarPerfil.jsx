@@ -5,18 +5,19 @@ import PhotoCamera from '@mui/icons-material/PhotoCameraOutlined';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/Auth';
 import { atualizaPerfil } from './AtualizaPerfil';
-
+import { RequisitaEditaPerfil } from '../../api/Requisicoes';
 
 export function BotaoModalEditarPerfil() {
     const {user} = useContext(AuthContext);
     const [urlFoto,setUrlFoto] = useState(user.fotoUsuario); 
     const [imagem,setImagem] = useState(null);
+    const [nome,setNome] = useState(user.nomeUsuario);
+    const [bio,setBio] = useState("");
 
     const alteraImagem = (event) => {
         const file = event.target.files[0];
         
         if(!file){ 
-            console.log("!file")
             return;
         }
 
@@ -25,10 +26,37 @@ export function BotaoModalEditarPerfil() {
         setImagem(file);
     }
 
+    const atualizaLocalStorage = (nome,url) => {
+        let user = JSON.parse(localStorage.getItem("usuario-tp-web"));
+        user.nomeUsuario = nome;
+        user.fotoUsuario = url;
+        localStorage.setItem("usuario-tp-web",JSON.stringify(user));
+    }
+
     const atualiza = async () => {
-        atualizaPerfil("","",imagem,user.username,function(error,url){
+        if(imagem == null){
+            let resposta = await RequisitaEditaPerfil(nome,urlFoto,bio);
+
+            if(resposta.erro){
+                alert(resposta.erro);
+            }else{
+                atualizaLocalStorage(nome,urlFoto);
+                alert(resposta.mensagem);
+                window.location.reload();
+            }
+        }
+
+        if(imagem != null)
+        atualizaPerfil(imagem,user.username,async function(error,url){
             if(!error){
-                alert(url);
+                let resposta = await RequisitaEditaPerfil(nome,url,bio);
+                if(resposta.erro){
+                    alert(resposta.erro);
+                }else{
+                    atualizaLocalStorage(nome,urlFoto);
+                    alert(resposta.mensagem);
+                    window.location.reload();
+                }
             }else{
                 alert(error);
             }
@@ -61,11 +89,11 @@ export function BotaoModalEditarPerfil() {
                             <form>
                                 <div className="form-group">
                                     <label for="recipient-name" className="col-form-label">Nome:</label>
-                                    <input type="text" className="form-control" id="recipient-name" />
+                                    <input type="text" className="form-control" id="recipient-name" value={nome} onChange={e => setNome(e.target.value)}/>
                                 </div>
                                 <div className="form-group">
                                     <label for="message-text" className="col-form-label">Bio:</label>
-                                    <textarea className="form-control" id="message-text"></textarea>
+                                    <textarea className="form-control" id="message-text" value={bio} onChange={e => setBio(e.target.value)}></textarea>
                                 </div>
                             </form>
                         </div>

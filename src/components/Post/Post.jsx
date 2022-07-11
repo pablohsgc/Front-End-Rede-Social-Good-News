@@ -5,13 +5,9 @@ import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 import { SvgIcon, Button } from '@mui/material';
 import { ButtonModalComentarios } from '../ButtonModalComentarios/ButtonModalComentarios';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { RequisitaDeletePostagem, RequisitaDeslike, RequisitaLike } from '../../api/Requisicoes';
 
-const handleDeletePost = async (idPost) => {
-    /*let response = await RequisitaDeletePost(idPost); // implementar função de deletar post
-    if (response.erro) {
-        alert(response.erro);
-    }*/
-}
+
 
 export function Post(props) {
     const foto = props.fotoUsuario;
@@ -19,6 +15,36 @@ export function Post(props) {
     const qtdLikes = props.likes.length;
     const qtdDislikes = props.dislikes.length;
     const porcentagem = ((qtdLikes + qtdDislikes) === 0)? 0 : qtdLikes/(qtdLikes + qtdDislikes) * 100;
+
+    const handleLikePost = async () => {
+        let resposta = await RequisitaLike(props.idPost);
+
+        if(!resposta.erro){
+            window.location.reload(); 
+        }else{
+            alert(resposta.erro);
+        }
+    }
+
+    const handleDeslikePost = async () => {
+        let resposta = await RequisitaDeslike(props.idPost);
+
+        if(!resposta.erro){
+            window.location.reload(); 
+        }else{
+            alert(resposta.erro);
+        }
+    }
+
+    const handleDeletePost = async () => {
+        let resposta = await RequisitaDeletePostagem(props.idPost);
+        
+        if(!resposta.erro){
+            window.location.reload(); 
+        }else{
+            alert(resposta.erro);
+        }
+    }
 
     return (
         <article className="post">
@@ -41,8 +67,8 @@ export function Post(props) {
             <div className="texto">{props.postagem}</div>
             <div className="rodapePost">
                 <div>
-                    <Button><SvgIcon component={ThumbUpOutlinedIcon} fontSize="medium" /></Button>
-                    <Button><SvgIcon component={ThumbDownAltOutlinedIcon} fontSize="medium" /></Button>
+                    <Button onClick={handleLikePost}><SvgIcon component={ThumbUpOutlinedIcon} fontSize="medium" /></Button>
+                    <Button onClick={handleDeslikePost}><SvgIcon component={ThumbDownAltOutlinedIcon} fontSize="medium" /></Button>
                     <ButtonModalComentarios quantidade={props.comentarios.length} comentarios={props.comentarios} idPost={props.idPost}></ButtonModalComentarios>
                 </div>
                 {props.tipoMeuPost && <Button onClick={handleDeletePost}><SvgIcon className="btn-delete" component={DeleteOutlineIcon} fontSize="medium" /></Button>}
