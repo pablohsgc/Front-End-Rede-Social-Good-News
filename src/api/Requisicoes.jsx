@@ -142,3 +142,41 @@ export async function RequisitaDeletePostagem(idPost){
     })
 }
 
+export async function RequisitaNovoComentario(mensagem, idPost){
+    let user = JSON.parse(localStorage.getItem('usuario-tp-web'));
+
+    let dados = {
+        mensagem:mensagem,
+        idPost:idPost
+    }
+
+    return await fetch(URL_BASE + "/postagens/insereComentario", {
+        method: 'POST',
+        body: JSON.stringify(dados),
+        headers: { "Content-type": "application/json; charset=UTF-8", bearer:user.token }
+    })
+    .then(response => response.json())
+    .catch((erro) => {
+        return {erro:erro}
+    })
+}
+
+export async function RequisitaNovoUsuario(username, email, password, name){
+    let dados = {
+        username:username,
+        email:email,
+        password:password,
+        name:name
+    }
+
+    return await fetch(URL_BASE + "/usuarios", {
+        method: 'POST',
+        body: JSON.stringify(dados),
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+    })
+    .then(response => response.json())
+    .catch((erro) => {
+        return {erro:erro}
+    })  
+
+}
