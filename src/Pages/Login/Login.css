@@ -36,7 +36,7 @@ body {
     top: -40px;
 }
 
-#form h1, h1 {
+#form h1, .cadastro {
     text-align: center;
     margin-bottom: 25px;
     font-family: 'Quicksand', sans-serif;

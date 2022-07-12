@@ -2,6 +2,7 @@ import './Comentario.css';
 
 export default function Comentario(props){
     const foto = props.fotoUsuario;
+    const data = props.data.substring(0, 10).split('-').reverse().join('/');
 
     return (
         <article className="comentario">
@@ -9,7 +10,7 @@ export default function Comentario(props){
                 <div className="usuarioPost">
                     <img className="fotoPerfilPost" src={foto} alt="Foto perfil"/>
                     <span className="nomeUsuarioPost">{props.nomeUsuario}</span>&nbsp;
-                    <span className="dataComentario">{props.data}</span>
+                    <span className="dataComentario">{data}</span>
                 </div>
             </header>
             <div className="texto">

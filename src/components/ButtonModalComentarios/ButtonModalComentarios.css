@@ -11,6 +11,9 @@
 .area-comentario-usuario .texto-comentario{
     margin-right: 20px;
     width: 80%;
+    background-color: var(--cor-border-secundario);
+    border-radius: 10px;
+    color: var(--cor-texto-primario);
 }
 
 .area-comentario-usuario .botao-comentario{
@@ -25,4 +28,9 @@
     font-size: 1em;
     /*padding-left: 30px;
     padding-right: 30px;*/
+}
+
+.area-comentario-do-usuario h5{
+    font-family: 'Quicksand', sans-serif;
+    color: var(--cor-texto-primario);
 }

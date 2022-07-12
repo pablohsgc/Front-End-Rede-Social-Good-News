@@ -9,7 +9,13 @@ export function ButtonModalComentarios(props){
     const [comentario,setComentario] = useState("");
 
     const comentar = async () => {
-      let resposta = await RequisitaNovoComentario
+      let resposta = await RequisitaNovoComentario(comentario, props.idPost);
+      if(!resposta.erro){
+        window.location.reload();
+      }
+      else{
+        alert(resposta.erro);
+      }
     }
 
     return (
@@ -42,7 +48,7 @@ export function ButtonModalComentarios(props){
                   <h5>Comentar</h5>
                   <div className="area-comentario-usuario">
                     <textarea className="texto-comentario" value={comentario} onChange={e => setComentario(e.target.value)}></textarea>
-                    <button className="botao-comentario">Comentar</button>
+                    <button className="botao-comentario" onClick={comentar}>Comentar</button>
                   </div>
                 </div>
 

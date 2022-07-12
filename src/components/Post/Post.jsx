@@ -11,17 +11,18 @@ import { RequisitaDeletePostagem, RequisitaDeslike, RequisitaLike } from '../../
 
 export function Post(props) {
     const foto = props.fotoUsuario;
-    
+
     const qtdLikes = props.likes.length;
     const qtdDislikes = props.dislikes.length;
-    const porcentagem = ((qtdLikes + qtdDislikes) === 0)? 0 : qtdLikes/(qtdLikes + qtdDislikes) * 100;
+    const porcentagem = ((qtdLikes + qtdDislikes) === 0) ? 0 : qtdLikes / (qtdLikes + qtdDislikes) * 100;
 
+    const data = props.data.substring(0, 10).split('-').reverse().join('/');
     const handleLikePost = async () => {
         let resposta = await RequisitaLike(props.idPost);
 
-        if(!resposta.erro){
-            window.location.reload(); 
-        }else{
+        if (!resposta.erro) {
+            window.location.reload();
+        } else {
             alert(resposta.erro);
         }
     }
@@ -29,19 +30,19 @@ export function Post(props) {
     const handleDeslikePost = async () => {
         let resposta = await RequisitaDeslike(props.idPost);
 
-        if(!resposta.erro){
-            window.location.reload(); 
-        }else{
+        if (!resposta.erro) {
+            window.location.reload();
+        } else {
             alert(resposta.erro);
         }
     }
 
     const handleDeletePost = async () => {
         let resposta = await RequisitaDeletePostagem(props.idPost);
-        
-        if(!resposta.erro){
-            window.location.reload(); 
-        }else{
+
+        if (!resposta.erro) {
+            window.location.reload();
+        } else {
             alert(resposta.erro);
         }
     }
@@ -52,7 +53,7 @@ export function Post(props) {
                 <div className="usuarioPost">
                     <img className="fotoPerfilPost" src={foto} alt="Foto de perfil" />
                     <span className="nomeUsuarioPost">{props.nomeUsuario}</span>
-                    <span className="dataComentario">{props.data}</span>
+                    <span className="dataComentario">{data}</span>
                 </div>
                 <div className="relevancia">
                     <div className="relevanciaTopo">
