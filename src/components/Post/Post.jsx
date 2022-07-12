@@ -1,22 +1,27 @@
 import './Post.css';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
-//import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 import { SvgIcon, Button } from '@mui/material';
 import { ButtonModalComentarios } from '../ButtonModalComentarios/ButtonModalComentarios';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { RequisitaDeletePostagem, RequisitaDeslike, RequisitaLike } from '../../api/Requisicoes';
 
-
+const user = JSON.parse(localStorage.getItem('usuario-tp-web'));
 
 export function Post(props) {
     const foto = props.fotoUsuario;
 
     const qtdLikes = props.likes.length;
     const qtdDislikes = props.dislikes.length;
-    const porcentagem = ((qtdLikes + qtdDislikes) === 0) ? 0 : qtdLikes / (qtdLikes + qtdDislikes) * 100;
+    let porcentagem = ((qtdLikes + qtdDislikes) === 0) ? 0 : qtdLikes / (qtdLikes + qtdDislikes) * 100;
+    porcentagem = porcentagem.toFixed(0);
 
     const data = props.data.substring(0, 10).split('-').reverse().join('/');
+    const iconeLike = (props.likes.find(elemento => elemento.username === user.username)) ? ThumbUpIcon : ThumbUpOutlinedIcon;
+    const iconeDislike = (props.dislikes.find(elemento => elemento.username === user.username)) ? ThumbDownAltIcon : ThumbDownAltOutlinedIcon;
+
     const handleLikePost = async () => {
         let resposta = await RequisitaLike(props.idPost);
 
@@ -68,8 +73,8 @@ export function Post(props) {
             <div className="texto">{props.postagem}</div>
             <div className="rodapePost">
                 <div>
-                    <Button onClick={handleLikePost}><SvgIcon component={ThumbUpOutlinedIcon} fontSize="medium" /></Button>
-                    <Button onClick={handleDeslikePost}><SvgIcon component={ThumbDownAltOutlinedIcon} fontSize="medium" /></Button>
+                    <Button onClick={handleLikePost}><SvgIcon component={iconeLike} fontSize="medium" /></Button>
+                    <Button onClick={handleDeslikePost}><SvgIcon component={iconeDislike} fontSize="medium" /></Button>
                     <ButtonModalComentarios quantidade={props.comentarios.length} comentarios={props.comentarios} idPost={props.idPost}></ButtonModalComentarios>
                 </div>
                 {props.tipoMeuPost && <Button onClick={handleDeletePost}><SvgIcon className="btn-delete" component={DeleteOutlineIcon} fontSize="medium" /></Button>}
