@@ -1,3 +1,28 @@
-.modalLargo{
+.area-comentario-do-usuario{
+    background-color: var(--bg-secundario);
+    padding: 10px;
+}
+
+.area-comentario-usuario{
+    display: flex;
+    justify-content:space-between;
+}
+
+.area-comentario-usuario .texto-comentario{
+    margin-right: 20px;
     width: 80%;
+}
+
+.area-comentario-usuario .botao-comentario{
+    width: 20%;
+    box-sizing: border-box;
+    background: var(--cor-botao-primario);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--cor-texto-primario);
+    font-weight: bold;
+    font-size: 1em;
+    /*padding-left: 30px;
+    padding-right: 30px;*/
 }

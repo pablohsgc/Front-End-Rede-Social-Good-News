@@ -2,8 +2,16 @@ import './ButtonModalComentarios.css'
 import { SvgIcon, Button } from '@mui/material';
 import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
 import Comentario from '../Comentario/Comentario';
+import { useState } from 'react';
+import { RequisitaNovoComentario } from '../../api/Requisicoes';
 
 export function ButtonModalComentarios(props){
+    const [comentario,setComentario] = useState("");
+
+    const comentar = async () => {
+      let resposta = await RequisitaNovoComentario
+    }
+
     return (
         <>
         <Button className="iconePost" data-bs-toggle="modal" data-bs-target={"#P"+props.idPost}>
@@ -29,6 +37,15 @@ export function ButtonModalComentarios(props){
                     <Comentario nomeUsuario={comentario.username} fotoUsuario={comentario.fotoUsuario} data={comentario.data} postagem={comentario.mensagem} key={indice}></Comentario>
                   ))
                 }
+
+                <div className="area-comentario-do-usuario">
+                  <h5>Comentar</h5>
+                  <div className="area-comentario-usuario">
+                    <textarea className="texto-comentario" value={comentario} onChange={e => setComentario(e.target.value)}></textarea>
+                    <button className="botao-comentario">Comentar</button>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
