@@ -1,6 +1,11 @@
-# Front end do trabalho final de da disciplina de Programação Web
+# Front End Rede Social Good News
+Este projeto é um trabalho da disciplina de Programação Web do Cefet-MG. Neste trabalho foi desenvolvido uma rede social para a validação de informações de usuários, na qual o usuário consegue interagir com postagens de outros usuários.
 
-## Grupo:
+Nesta aplicação o usuário deve logar para interagir na aplicação, podendo fazer postagens, curtir, dar deslike e comentar postagens de outros usuários.
+
+Neste projeto foi utilizado banco de dados não relacional MongoDB, autenticação via JWT, front end com ReactJS e back end com NodeJS. Para upload de imagens foi utilizado firebase-storage.
+
+## Autores:
  - Pablo Henrique Santos, 20183012250
  - Guilherme Nogueira Coelho, 20183011834
 
@@ -18,12 +23,51 @@
 Este site está hospedado no vercel, para acessar basta acessar o link abaixo:
 https://rede-social-tp-web.vercel.app/
 
-## Como localizar os dados:
-Para facilitar, criamos um repositório no github para simular uma API, contendo as imagens e arquivos '.json', para simular o retorno das requisições.
+## Telas
+### Login
+Página onde o usuário cadastrado consegue fazer login na rede social.
 
-O repositório que simula a API está em: https://github.com/pablohsg/Requisicoes
+![Login](images/login.PNG)
 
-## Usuário da aplicação:
-Deixamos a aplicação com um usuário. Teste a aplicação usando:
- - username: **usuario1@teste.com**
- - password: **senha1** 
+### Cadastro de usuário
+Página onde um novo usuário pode fazer cadastro na rede social.
+
+![Cadastro de usuário](images/cadastro.PNG)
+
+### Home
+Página inicial, onde um usuário logado consegue ver as postagens de outros usuários.
+
+![Home](images/home.PNG)
+
+### Criar post
+Modal onde um usuário consegue criar uma postagem na rede social.
+
+![Criar Post](images/criar-post.PNG)
+
+### Editar perfil
+Modal onde um usuário consegue editar informações do seu próprio perfil, e até fazer a troca de sua foto de perfil.
+
+![Editar perfil](images/editar-perfil.PNG)
+
+### Meus posts
+Página onde um usuário consegue ver todos os suas postagens, se for da vontade do usuário, é possivel excluir sua postagem.
+
+![Meus posts](images/meus-posts.PNG)
+
+### Comentários
+Modal onde um usuário consegue ver todos os comentários de uma postagem.
+
+![Comentários](images/comentarios.PNG)
+
+## Tecnologias 
+ - ReactJS
+ - HTML
+ - CSS
+ - Java Script
+ - FireBase
+
+## Deploy
+ - Vercel
+ - Link do front end: https://rede-social-tp-web.vercel.app/
+ - Repositório back end: https://github.com/GuiNo12/BackEnd-Tp-WEB
+ - Link do back end: https://rede-social-goodnews.herokuapp.com/
